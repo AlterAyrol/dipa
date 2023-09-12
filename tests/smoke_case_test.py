@@ -1,3 +1,5 @@
+import time
+
 import allure
 from allure_commons.types import Severity
 
@@ -64,9 +66,11 @@ def test_send_empty_message():
 
     start = StartPage()
     start.open_page('')
+    time.sleep(2)
     start.click_on_contacts_button()
+    time.sleep(2)
     start.click_send_message_button()
-    start.check_our_product_text(text)
+    start.check_send_message_is_true(text)
 
 
 @allure.tag('StartPage')
