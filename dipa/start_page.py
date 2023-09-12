@@ -15,8 +15,7 @@ class StartPage:
     our_product_locator = '//a[@href="#about"]'
     contacts_button_locator = '//a[@href="#contacts"]'
     contacts_info_locator = '#contacts'
-    demo_container_locator = '#demo'
-    send_message_locator = '//button[@type="submit"]'
+    demo_container_locator = '//div[@id="demo"]//button[@type="submit"]'
     find_price_button_locator = '//a[@href="#price"]'
     calculate_cost_button_locator = '//a[@href="#price"]'
     price_container_locator = '#price'
@@ -54,7 +53,7 @@ class StartPage:
 
     @allure.step('Нажимает на кнопку подтвердить в контактах')
     def click_send_message_button(self):
-        browser.element(self.demo_container_locator).element(self.send_message_locator).click()
+        browser.element(self.demo_container_locator).click()
 
     @allure.step('Проверяет текст после отправки сообщения')
     def check_send_message_is_true(self, text):
