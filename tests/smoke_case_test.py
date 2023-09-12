@@ -65,6 +65,7 @@ def test_send_empty_message():
     start = StartPage()
     start.open_page('')
     start.click_on_contacts_button()
+    start.click_send_message_button()
     start.check_our_product_text(text)
 
 
