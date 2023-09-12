@@ -9,7 +9,7 @@ from dipa.start_page import StartPage
 @allure.label("owner", "AlterAyrol")
 @allure.epic('Тестирование стартовой страницы')
 @allure.story("Проверяет переключение текста на английский")
-def check_english_switch_test():
+def test_check_english_switch():
 
     ru_text = 'О продукте'
     eng_text = 'Our product'
@@ -26,7 +26,7 @@ def check_english_switch_test():
 @allure.label("owner", "AlterAyrol")
 @allure.epic('Тестирование стартовой страницы')
 @allure.story("Проверяет переключение текста на русский после английского")
-def check_ru_switch_test():
+def test_check_ru_switch_test():
 
     ru_text = 'О продукте'
     eng_text = 'Our product'
@@ -45,7 +45,7 @@ def check_ru_switch_test():
 @allure.label("owner", "AlterAyrol")
 @allure.epic('Тестирование стартовой страницы')
 @allure.story("Проверяет правильность указанного адреса")
-def check_contact_information():
+def test_check_contact_information():
     info = 'Москва, ул.Тверская, д.18, корп.1, офис 615'
 
     start = StartPage()
@@ -59,7 +59,7 @@ def check_contact_information():
 @allure.label("owner", "AlterAyrol")
 @allure.epic('Тестирование стартовой страницы')
 @allure.story("Проверяет подтверждающий текст после отправки сообщения из контактов")
-def send_empty_message():
+def test_send_empty_message():
     text = 'Вы отправили нам пустое сообщение. Пожалуйста заполните форму полностью'
 
     start = StartPage()
@@ -73,7 +73,7 @@ def send_empty_message():
 @allure.label("owner", "AlterAyrol")
 @allure.epic('Тестирование стартовой страницы')
 @allure.story("Проверяет подтверждающий текст после отправки заявки на расчёт стоимости")
-def check_cost_calculator():
+def test_check_cost_calculator():
     text = 'Спасибо Вам за сообщение'
 
     start = StartPage()
